@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 # Based on https://github.com/tsaleh/dotfiles/blob/master/vim/update_bundles
 
 git_bundles = [ 
