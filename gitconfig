@@ -1,6 +1,7 @@
 [user]
 	name = Andrew Frankel
-	email = andrew@adaptly.com
+	email = andrew@leknarf.net
+    editor = vim
 [color]
 	diff = auto
 	status = auto
@@ -12,3 +13,5 @@
 	default = current
 [core]
 	excludesfile = /Users/andrew/.gitignore_global
+[branch]
+    autosetuprebase = always
