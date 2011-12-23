@@ -1,4 +1,5 @@
 call pathogen#infect()
+call pathogen#helptags()
 
 set ls=2            " allways show status line
 set hlsearch        " highlight searches
