@@ -6,8 +6,14 @@ EXCLUDES = ['scripts', 'README.markdown']
 
 FileUtils.cd('..')
 home = File.expand_path('~')
+targets = Dir['*'].reject {|f| EXCLUDES.include? f}
 
-Dir['*'].each do |file|
+puts "About to create dotfiles for: #{targets}"
+puts "Proceed? (Y/n)"
+confirm = gets
+exit unless confirm[0] == 'Y'
+
+targets.each do |file|
   next if EXCLUDES.include? file
   puts "Updating dotfile: #{file}"
   target = File.join(home, ".#{file}")

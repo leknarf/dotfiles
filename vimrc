@@ -32,3 +32,4 @@ filetype plugin on
 map <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
+map <F12> :nohl<CR>
