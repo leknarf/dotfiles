@@ -1,6 +1,3 @@
-# Postgres
-export PATH=/usr/local/bin:$PATH
-
 # Ruby
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
@@ -8,5 +5,12 @@ export PATH=/usr/local/bin:$PATH
 source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/virtualenvs
 
+# Postgres
+export PATH=$PATH:/usr/local/bin
+
 # Rabbitmq
 export PATH=$PATH:/usr/local/sbin
+
+# Zshell
+cdpath=(~ ~/Dropbox/Development ~/Dropbox/Adaptly)
+PUSHD_MINUS=1 
