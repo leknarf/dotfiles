@@ -16,9 +16,10 @@ set directory=~/.vim/swp//
 set autoindent
 set smarttab
 set smartindent
-set tabstop=4
-set shiftwidth=4
 set expandtab
+set shiftwidth=2
+set tabstop=2
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 set background=dark
 colorscheme solarized
