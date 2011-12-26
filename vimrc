@@ -25,6 +25,7 @@ set expandtab
 
 set background=dark
 colorscheme solarized
+set guifont=Monaco:h12
 
 syntax on
 filetype on
