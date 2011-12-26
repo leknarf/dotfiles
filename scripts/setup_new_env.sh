@@ -9,6 +9,7 @@ ln -s ~/Dropbox/.ssh ~/.ssh
 if [[ ! `which brew` ]]; then
     echo "Installing homebrew"
     ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
+    brew update
 fi
 
 if [[ ! `which macvim` ]]; then
@@ -16,6 +17,10 @@ if [[ ! `which macvim` ]]; then
     brew install macvim
     brew linkapps
 fi
+
+echo "Installing additional packages"
+[[ `which psql` == "/usr/local/bin/psql" ]] || brew install postgres
+[[ `which ack` ]] || brew install ack
 
 echo "Configuring VIM"
 mkdir -p ~/.vim/backup

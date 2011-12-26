@@ -5,11 +5,8 @@
 source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/virtualenvs
 
-# Postgres
-export PATH=$PATH:/usr/local/bin
-
-# Rabbitmq
-export PATH=$PATH:/usr/local/sbin
+# Homebrew
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Zshell
 cdpath=(~ ~/Dropbox/Development ~/Dropbox/Adaptly)
