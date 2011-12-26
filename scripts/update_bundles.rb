@@ -23,7 +23,6 @@ git_bundles = [
   "git://github.com/tsaleh/vim-matchit.git",
   "git://github.com/vim-ruby/vim-ruby.git",
   "git://github.com/vim-scripts/Gist.vim.git",
-  "git://github.com/vim-scripts/AutoComplPop.git",
   "git://github.com/vim-scripts/IndexedSearch.git",
   "git://github.com/vim-scripts/jQuery.git",
 ]
