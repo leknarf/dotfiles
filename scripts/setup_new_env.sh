@@ -4,7 +4,15 @@ echo "Copying SSH keys"
 [[ -e ~/.ssh/ ]] && rm -rf ~/.ssh/
 ln -s ~/Dropbox/.ssh ~/.ssh
 
-# TODO: Setup ruby/python
+if ! type rvm; then
+  echo "Installing/Updating Ruby"
+  bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+  rvm install 1.9.2
+  rvm --default use 1.9.2
+fi
+
+# TODO: Setup python
 
 if [[ ! `which brew` ]]; then
     echo "Installing homebrew"
@@ -13,7 +21,7 @@ if [[ ! `which brew` ]]; then
 fi
 
 if [[ ! `which macvim` ]]; then
-    echo "Installing macvim" 
+    echo "Installing macvim"
     brew install macvim
     brew linkapps
 fi
