@@ -2,8 +2,8 @@
 
 if [[ ! -L ~/.ssh ]]; then
   echo "Copying SSH keys"
-  rm -rf ~/.ssh/
-  ln -s ~/Dropbox/.ssh ~/.ssh
+  mv ~/.ssh/ ~/.ssh.backup
+  ln -s ~/Dropbox/ssh ~/.ssh
 fi
 
 if [[ ! `which brew` ]]; then
