@@ -8,6 +8,7 @@ set ignorecase      " ignore case when searching
 set nowrap          " stop lines from wrapping
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set mouse=a
+set clipboard=unnamed
 
 set backup
 set backupdir=~/.vim/backup//

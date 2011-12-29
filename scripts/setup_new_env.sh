@@ -9,15 +9,19 @@ fi
 if [[ ! `which brew` ]]; then
   echo "Installing homebrew and unix packages"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
-  brew install libiconv # Required by ruby
-  brew install ack
-  brew install tree
-  brew install git
-  brew install xz coreutils
 fi
+
+unix_pkgs=("ack" "hg" "tree" "tmux" "git" "xz" "coreutils" "watch")
+for pkg in unix_pkgs; do
+  if ! `brew list | grep $pkg`; then
+    echo "Installing $pkg"
+    brew install $pkg
+  fi
+done
 
 if ! type rvm; then
   echo "Installing/Updating Ruby"
+  brew install libiconv # Required by ruby
   bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
   CC=gcc-4.2 rvm install 1.9.2 --with-iconv-dir=/usr/local/Cellar/libiconv/1.14.1
@@ -29,16 +33,15 @@ if [[ ! `which virtualenv` ]]; then
   sudo easy_install readline virtualenv virtualenvwrapper ipython
 fi
 
-if [[ ! `which brew` ]]; then
-    echo "Installing homebrew"
-    ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
-    brew update
-fi
-
-if [[ ! `which macvim` ]]; then
-    echo "Installing macvim"
-    brew install macvim
-    brew linkapps
+if ! `vim --version | grep +clipboard`; then
+    echo "Replacing the builtin vim"
+    mkdir -p /usr/local/src
+    cd /usr/local/src
+    hg clone https://vim.googlecode.com/hg/ vim
+    cd vim
+    ./configure --prefix=/usr/local --enable-rubyinterp --enable-pythoninterp --enable-gui --with-features=huge
+    make
+    make install
 fi
 
 echo "Configuring VIM"
@@ -47,7 +50,3 @@ mkdir -p ~/.vim/swp
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -so ~/.vim/autoload/pathogen.vim \
   https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
-./update_bundles.rb
-
-echo "Creating soft links to dotfiles"
-./create_soft_links.rb
