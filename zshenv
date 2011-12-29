@@ -10,4 +10,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Zshell
 cdpath=(~ ~/Dropbox/Development ~/Dropbox/Adaptly)
-PUSHD_MINUS=1 
+PUSHD_MINUS=1
+
+# Tmux
+alias tmux="TERM=screen-256color-bce tmux"

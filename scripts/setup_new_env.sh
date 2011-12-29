@@ -19,6 +19,16 @@ for pkg in "${unix_pkgs[@]}"; do
   fi
 done
 
+if [[ ! `which reattach-to-user-namespace` ]]; then
+  echo "Installing pasteboard wrapper script for tmux"
+  mkdir -p /usr/local/src
+  cd /usr/local/src
+  git clone git://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard tmux_wrapper
+  cd tmux_wrapper
+  make reattach-to-user-namespace
+  cp reattach-to-user-namespace /usr/local/bin
+fi
+
 if ! type rvm &> /dev/null; then
   echo "Installing/Updating Ruby"
   brew install libiconv # Required by ruby
