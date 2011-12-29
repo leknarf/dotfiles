@@ -11,15 +11,15 @@ if [[ ! `which brew` ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
 fi
 
-unix_pkgs=("ack" "hg" "tree" "tmux" "git" "xz" "coreutils" "watch")
-for pkg in unix_pkgs; do
-  if ! `brew list | grep $pkg`; then
+unix_pkgs=("ack" "mercurial" "tree" "tmux" "git" "xz" "coreutils" "watch")
+for pkg in "${unix_pkgs[@]}"; do
+  if [[ -z `brew list | grep "$pkg"` ]]; then
     echo "Installing $pkg"
-    brew install $pkg
+    brew install "$pkg"
   fi
 done
 
-if ! type rvm; then
+if ! type rvm &> /dev/null; then
   echo "Installing/Updating Ruby"
   brew install libiconv # Required by ruby
   bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
@@ -33,7 +33,7 @@ if [[ ! `which virtualenv` ]]; then
   sudo easy_install readline virtualenv virtualenvwrapper ipython
 fi
 
-if ! `vim --version | grep +clipboard`; then
+if [[ -z `vim --version | grep +clipboard` ]]; then
     echo "Replacing the builtin vim"
     mkdir -p /usr/local/src
     cd /usr/local/src

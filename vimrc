@@ -9,6 +9,7 @@ set nowrap          " stop lines from wrapping
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set mouse=a
 set clipboard=unnamed
+set backspace=indent,eol,start
 
 set backup
 set backupdir=~/.vim/backup//
