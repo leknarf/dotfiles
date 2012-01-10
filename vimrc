@@ -5,15 +5,20 @@ set hlsearch        " highlight searches
 set incsearch       " do incremental searching
 set ruler           " show the cursor position all the time
 set ignorecase      " ignore case when searching
+set smartcase
+set gdefault
 set nowrap          " stop lines from wrapping
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set mouse=a
 set clipboard=unnamed
 set backspace=indent,eol,start
+set showcmd
+au FocusLost * :wa
 
 set backup
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
+set undodir=~/.vim/undo//
 
 set autoindent
 set smarttab
@@ -21,6 +26,9 @@ set smartindent
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set relativenumber
+set undofile
+let mapleader = "'"
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 set background=dark
@@ -35,7 +43,24 @@ filetype plugin on
 map <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
+map <F11> :YRShow<CR>
 map <F12> :nohl<CR>
+
+" Shortcuts for splits
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>v <C-w>s<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Use - to toggle between matched characters
+nnoremap - %
+vnoremap - %
+
+" Quick exit insert mode
+inoremap aa <ESC>
+inoremap -- <ESC>
 
 "automatically remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e

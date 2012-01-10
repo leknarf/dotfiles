@@ -50,3 +50,7 @@ PUSHD_MINUS=1
 
 # Tmux
 alias tmux="TERM=screen-256color-bce tmux"
+
+# Fix for Vim NerdTree problem
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

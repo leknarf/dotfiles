@@ -11,7 +11,7 @@ if [[ ! `which brew` ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
 fi
 
-unix_pkgs=("ack" "mercurial" "tree" "tmux" "git" "xz" "coreutils" "watch")
+unix_pkgs=("ack" "mercurial" "tree" "tmux" "git" "xz" "coreutils" "watch" "ctags")
 for pkg in "${unix_pkgs[@]}"; do
   if [[ -z `brew list | grep "$pkg"` ]]; then
     echo "Installing $pkg"
@@ -57,6 +57,7 @@ fi
 echo "Configuring VIM"
 mkdir -p ~/.vim/backup
 mkdir -p ~/.vim/swp
+mkdir -p ~/.vim/undo
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -so ~/.vim/autoload/pathogen.vim \
   https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
