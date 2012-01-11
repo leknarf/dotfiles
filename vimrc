@@ -19,6 +19,7 @@ set backup
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 set undodir=~/.vim/undo//
+let g:yankring_history_dir='~/.vim'
 
 set autoindent
 set smarttab
