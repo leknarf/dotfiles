@@ -23,6 +23,7 @@ let g:yankring_history_dir='~/.vim'
 
 set autoindent
 set autoread
+set scrolloff=5
 set smarttab
 set smartindent
 set expandtab
@@ -36,6 +37,8 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4
 set background=dark
 colorscheme solarized
 set guifont=Monaco:h12
+scriptencoding utf-8
+let NERDTreeDirArrows=0
 
 syntax on
 filetype on
