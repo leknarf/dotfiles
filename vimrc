@@ -22,6 +22,7 @@ set undodir=~/.vim/undo//
 let g:yankring_history_dir='~/.vim'
 
 set autoindent
+set autoread
 set smarttab
 set smartindent
 set expandtab
@@ -61,7 +62,6 @@ vnoremap - %
 
 " Quick exit insert mode
 inoremap aa <ESC>
-inoremap -- <ESC>
 
 "automatically remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
