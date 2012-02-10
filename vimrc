@@ -7,12 +7,12 @@ set ruler           " show the cursor position all the time
 set ignorecase      " ignore case when searching
 set smartcase
 set gdefault
-set nowrap          " stop lines from wrapping
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set mouse=a
 set clipboard=unnamed
 set backspace=indent,eol,start
 set showcmd
+set showtabline=2 " always show tabs
 au FocusLost * :wa
 
 set backup
@@ -38,7 +38,15 @@ set background=dark
 colorscheme solarized
 set guifont=Monaco:h12
 scriptencoding utf-8
+
 let NERDTreeDirArrows=0
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+let Tlist_Close_On_Select = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Process_File_Always = 1
+let Tlist_File_Fold_Auto_Close = 1
+let Tlist_WinWidth = 40
+let g:easytags_updatetime_autodisable = 1
 
 syntax on
 filetype on
@@ -46,18 +54,24 @@ filetype indent on
 filetype plugin on
 
 map <F1> :NERDTreeToggle<CR>
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
-map <F11> :YRShow<CR>
+map <F2> :TlistToggle<CR>
+map <F3> :YRShow<CR>
+set pastetoggle=<F11>
+nnoremap <F11> :set invpaste paste?<CR>
 map <F12> :nohl<CR>
 
-" Shortcuts for splits
+" Shortcuts for splits/tabs/buffers
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>v <C-w>s<C-w>l
+nnoremap <leader>t :tabe<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nmap <Left> :tabp<CR>
+nmap <Right> :tabn<CR>
+nmap <Up> :bp<CR>
+nmap <Down> :bn<CR>
 
 " Use - to toggle between matched characters
 nnoremap - %

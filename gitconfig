@@ -1,7 +1,7 @@
 [user]
 	name = Andrew Frankel
 	email = andrew@leknarf.net
-    editor = vim
+  editor = /usr/local/bin/vim
 [color]
 	diff = auto
 	status = auto
