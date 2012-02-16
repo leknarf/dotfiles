@@ -13,7 +13,10 @@ set clipboard=unnamed
 set backspace=indent,eol,start
 set showcmd
 set showtabline=2 " always show tabs
-au FocusLost * :wa
+
+" Autosave when switching buffers
+autocmd BufLeave silent! wall
+set autowriteall
 
 set backup
 set backupdir=~/.vim/backup//
@@ -61,17 +64,18 @@ nnoremap <F11> :set invpaste paste?<CR>
 map <F12> :nohl<CR>
 
 " Shortcuts for splits/tabs/buffers
-nnoremap <leader>w <C-w>v<C-w>l
-nnoremap <leader>v <C-w>s<C-w>l
-nnoremap <leader>t :tabe<CR>
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-nmap <Left> :tabp<CR>
-nmap <Right> :tabn<CR>
-nmap <Up> :bp<CR>
-nmap <Down> :bn<CR>
+" Each of these also saves everything before switching
+nnoremap <leader>w :wa<CR><C-w>v<C-w>l
+nnoremap <leader>v :wa<CR><C-w>s<C-w>l
+nnoremap <leader>t :wa<CR>:tabe<CR>
+nnoremap <C-h> :wa<CR><C-w>h
+nnoremap <C-j> :wa<CR><C-w>j
+nnoremap <C-k> :wa<CR><C-w>k
+nnoremap <C-l> :wa<CR><C-w>l
+nmap <Left> :wa<CR>:tabp<CR>
+nmap <Right> :wa<CR>:tabn<CR>
+nmap <Up> :wa<CR>:bp<CR>
+nmap <Down> :wa<CR>:bn<CR>
 
 " Use - to toggle between matched characters
 nnoremap - %
