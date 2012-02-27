@@ -43,6 +43,7 @@ set guifont=Monaco:h12
 scriptencoding utf-8
 
 let NERDTreeDirArrows=0
+let NERDTreeQuitOnOpen = 1
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 let Tlist_Close_On_Select = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
@@ -76,6 +77,9 @@ nmap <Left> :wa<CR>:tabp<CR>
 nmap <Right> :wa<CR>:tabn<CR>
 nmap <Up> :wa<CR>:bp<CR>
 nmap <Down> :wa<CR>:bn<CR>
+
+" Use K to Split two lines (like the reverse of J)
+:nnoremap K i<CR><Esc>
 
 " Use - to toggle between matched characters
 nnoremap - %
