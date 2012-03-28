@@ -2,6 +2,8 @@
 # Based on https://github.com/tsaleh/dotfiles/blob/master/vim/update_bundles
 
 git_bundles = [
+  "git@github.com:leknarf/syntastic.git",
+
   "git://github.com/altercation/vim-colors-solarized.git",
   "git://github.com/ervandew/supertab.git",
   "git://github.com/godlygeek/tabular.git",
@@ -9,7 +11,6 @@ git_bundles = [
   "git://github.com/pangloss/vim-javascript.git",
   "git://github.com/scrooloose/nerdcommenter.git",
   "git://github.com/scrooloose/nerdtree.git",
-  "git://github.com/scrooloose/syntastic.git",
   "git://github.com/timcharper/textile.vim.git",
   "git://github.com/tpope/vim-endwise.git",
   "git://github.com/tpope/vim-fugitive.git",
