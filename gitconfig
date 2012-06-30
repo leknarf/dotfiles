@@ -1,19 +1,19 @@
 [user]
-	name = Andrew Frankel
-	email = andrew@leknarf.net
+  name = Andrew Frankel
+  email = andrew@leknarf.net
   editor = /usr/local/bin/vim
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
-	ui = true
-	pager = true
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
 [push]
-	default = current
+  default = current
 [core]
-	excludesfile = /Users/andrew/.gitignore_global
+  excludesfile = /Users/andrew/.gitignore_global
 [branch]
-    autosetuprebase = always
+  autosetuprebase = always
 [diff]
-	external = /Users/andrew/opendiff_git.sh
+  external = /Users/andrew/opendiff_git.sh
