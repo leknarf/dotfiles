@@ -2,7 +2,7 @@
 # Based on http://errtheblog.com/posts/89-huba-huba
 
 require 'fileutils'
-EXCLUDES = ['scripts', 'README.markdown']
+EXCLUDES = ['scripts', 'README.markdown', 'com.googlecode.iterm2.plist']
 
 FileUtils.cd('..')
 home = File.expand_path('~')
@@ -12,7 +12,7 @@ puts "About to create dotfiles for:"
 targets.each {|t| puts "\t#{t}"}
 puts "Proceed? (Y/n)"
 confirm = gets
-exit unless confirm.chr == 'Y'
+exit unless confirm.chars.first == 'Y'
 
 targets.each do |file|
   next if EXCLUDES.include? file

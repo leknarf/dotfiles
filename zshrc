@@ -55,3 +55,10 @@ alias tmux="TERM=screen-256color-bce tmux"
 # Fix for Vim NerdTree problem
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# Node
+export NODE_PATH="/usr/local/lib/node"
+export PATH="$PATH:/usr/local/share/npm/bin"
+
+# Adaptly
+alias mongod='nohup mongod run --config /usr/local/etc/mongod.conf &'
