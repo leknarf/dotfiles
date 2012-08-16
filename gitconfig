@@ -1,7 +1,7 @@
 [user]
   name = Andrew Frankel
   email = andrew@leknarf.net
-  editor = /usr/local/bin/vim
+  editor = /usr/bin/vim
 [color]
   diff = auto
   status = auto
@@ -13,6 +13,7 @@
   default = current
 [core]
   excludesfile = /Users/andrew/.gitignore_global
+  editor = /usr/bin/vim
 [branch]
   autosetuprebase = always
 [diff]

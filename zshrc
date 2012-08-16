@@ -45,7 +45,7 @@ export WORKON_HOME=~/virtualenvs
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Zshell
-cdpath=(~ ~/Dropbox/Development ~/Dropbox/Adaptly)
+cdpath=(~ ~/Dropbox/Development ~/Dropbox/)
 export CDPATH
 PUSHD_MINUS=1
 
@@ -57,7 +57,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Node
-export NODE_PATH="/usr/local/lib/node"
+export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
 export PATH="$PATH:/usr/local/share/npm/bin"
 
 # Adaptly
