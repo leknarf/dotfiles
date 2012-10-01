@@ -5,8 +5,9 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="Soliah"
+#ZSH_THEME="Soliah"
 #ZSH_THEME='robbyrussell'
+ZSH_THEME='af-magic'
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -30,12 +31,13 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler git osx vi-mode)
+plugins=(git osx)
 
 source $ZSH/oh-my-zsh.sh
 
 # Ruby
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init - zsh)"
 
 # Python
 source /usr/local/bin/virtualenvwrapper.sh
@@ -49,9 +51,6 @@ cdpath=(~ ~/Dropbox/Development ~/Dropbox/)
 export CDPATH
 PUSHD_MINUS=1
 
-# Tmux
-alias tmux="TERM=screen-256color-bce tmux"
-
 # Fix for Vim NerdTree problem
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -59,6 +58,3 @@ export LANG=en_US.UTF-8
 # Node
 export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
 export PATH="$PATH:/usr/local/share/npm/bin"
-
-# Adaptly
-alias mongod='nohup mongod run --config /usr/local/etc/mongod.conf &'

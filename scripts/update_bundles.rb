@@ -2,7 +2,7 @@
 # Based on https://github.com/tsaleh/dotfiles/blob/master/vim/update_bundles
 
 git_bundles = [
-  "git@github.com:leknarf/syntastic.git",
+  "git://github.com/leknarf/syntastic.git",
 
   "git://github.com/altercation/vim-colors-solarized.git",
   "git://github.com/ervandew/supertab.git",

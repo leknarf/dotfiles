@@ -8,7 +8,7 @@ fi
 
 if [[ ! -L ~/.ssh ]]; then
   echo "Copying SSH keys"
-  mv ~/.ssh/ ~/.ssh.backup
+  test -e ~/.ssh && mv ~/.ssh/ ~/.ssh.backup
   ln -s ~/Dropbox/ssh ~/.ssh
   chmod 600 ~/.ssh/*
 fi
@@ -23,10 +23,11 @@ done
 
 if ! type rvm &> /dev/null; then
   echo "Installing/Updating Ruby"
-  bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-  CC=gcc-4.2 rvm install 1.9.2 --with-iconv-dir=/usr/local/Cellar/libiconv/1.14.1
-  rvm --default use 1.9.2
+  cd ~
+  git clone git://github.com/sstephenson/rbenv.git .rbenv
+  mkdir -p ~/.rbenv/plugins
+  cd ~/.rbenv/plugins
+  git clone git://github.com/sstephenson/ruby-build.git
 fi
 
 if [[ ! `which virtualenv` ]]; then

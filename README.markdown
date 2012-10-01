@@ -8,13 +8,13 @@
   - Lower-left: Desktop
   - Lower-right: Mission Control
 - Language & Text -> Show Input menu in menu bar
-- Universal Access ->
+- Universal Access
   - Enable access for assistive devices
   - Flash the screen when an alert occurs
-- Displays ->
+- Displays
   - Show displays in menu bar
   - Disable "Automatically adjust brightness"
-- Set Keyboard ->
+- Set Keyboard
   - Disable "Automatically illuminate keyboard in low light"
   - Use all F1, F2, etc. keys as standard function keys
   - Key Repeat = Fast
@@ -22,17 +22,17 @@
 
 ## Install
 - 1Password
-- Adium
 - Chrome
 - Dropbox
 - F.lux
-- GCC (https://github.com/kennethreitz/osx-gcc-installer/downloads)
 - Navicat
-- Xcode
+- Skype
+- VLC
 - iTerm2
 
  Open XCode at least once and install the command line tools: Preferences -> Downloads
  In iterm2:
+
    enable "load preferences from user-defined folder" -> "/Users/andrew/Dropbox/Development/dotfiles
    Preferences -> Colors -> Load Presets -> Solarized Dark
 
