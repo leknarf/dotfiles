@@ -60,6 +60,7 @@ filetype plugin on
 map <F1> :NERDTreeToggle<CR>
 map <F2> :TlistToggle<CR>
 map <F3> :YRShow<CR>
+map <F10> :SyntasticToggleMode<CR>
 set pastetoggle=<F11>
 nnoremap <F11> :set invpaste paste?<CR>
 map <F12> :nohl<CR>
@@ -265,3 +266,6 @@ endfunction
 "syntastic settings
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_mode_map = { 'mode' : 'active',
+                           \ 'active_filetypes': ['ruby', 'python', 'javascript', 'coffee'],
+                           \ 'passive_filetypes': ['cucumber'] }
