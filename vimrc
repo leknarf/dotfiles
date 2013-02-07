@@ -36,6 +36,7 @@ set relativenumber
 set undofile
 let mapleader = "'"
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
+autocmd FileType markdown set spell
 
 set background=dark
 colorscheme solarized
