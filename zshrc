@@ -40,8 +40,9 @@ export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init - zsh)"
 
 # Python
-source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export WORKON_HOME=~/virtualenvs
+source /usr/local/share/python/virtualenvwrapper.sh
 
 # Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -58,3 +59,9 @@ export LANG=en_US.UTF-8
 # Node
 export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
 export PATH="$PATH:/usr/local/share/npm/bin"
+
+# Chef
+export EDITOR=vim
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
