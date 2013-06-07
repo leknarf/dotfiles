@@ -625,6 +625,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSFileViewer</key>
+	<string>com.cocoatech.PathFinder</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Dropbox/Development/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -655,7 +657,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>472 459 924 485 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>454 10 1221 1017 0 0 1680 1028 </string>
+	<string>208 374 1018 218 0 0 1680 1028 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2162,7 +2164,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-04-18T14:48:38Z</date>
+	<date>2013-05-19T17:12:29Z</date>
 	<key>SUSkippedVersion</key>
 	<string>1.0.0.20130319</string>
 	<key>SavePasteHistory</key>

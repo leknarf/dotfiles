@@ -34,6 +34,9 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git osx knife)
 
 source $ZSH/oh-my-zsh.sh
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gbd="git branch -d"
+alias gbD="git branch -D"
 
 # Ruby
 export PATH=$HOME/.rbenv/bin:$PATH
