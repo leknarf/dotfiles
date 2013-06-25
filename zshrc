@@ -38,17 +38,22 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gbd="git branch -d"
 alias gbD="git branch -D"
 
-# Ruby
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init - zsh)"
+
+# Homebrew
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Python
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export WORKON_HOME=~/virtualenvs
 source /usr/local/share/python/virtualenvwrapper.sh
 
-# Homebrew
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+# Node
+export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
+export PATH="$PATH:/usr/local/share/npm/bin"
+
+# Ruby
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init - zsh)"
 
 # Zshell
 cdpath=(~ ~/Dropbox/Development ~/Dropbox/)
@@ -58,10 +63,6 @@ PUSHD_MINUS=1
 # Fix for Vim NerdTree problem
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-# Node
-export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
-export PATH="$PATH:/usr/local/share/npm/bin"
 
 # Chef
 export EDITOR=vim

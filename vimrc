@@ -44,7 +44,7 @@ set guifont=Monaco:h12
 scriptencoding utf-8
 
 let NERDTreeDirArrows=0
-let NERDTreeQuitOnOpen = 1
+let NERDTreeQuitOnOpen=0
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 let Tlist_Close_On_Select = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
@@ -269,4 +269,4 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_mode_map = { 'mode' : 'active',
                            \ 'active_filetypes': ['ruby', 'python', 'javascript', 'coffee'],
-                           \ 'passive_filetypes': ['cucumber'] }
+                           \ 'passive_filetypes': ['cucumber', 'html'] }
