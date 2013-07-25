@@ -56,7 +56,7 @@ export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init - zsh)"
 
 # Zshell
-cdpath=(~ ~/Dropbox/Development ~/Dropbox/)
+cdpath=(~ ~/Dropbox/Development ~/Dropbox/ /Users/andrew/Dropbox/Leknarf\ Labs)
 export CDPATH
 PUSHD_MINUS=1
 
@@ -66,6 +66,9 @@ export LANG=en_US.UTF-8
 
 # Chef
 export EDITOR=vim
+
+# Nethack
+export PATH=$PATH:/usr/games/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
